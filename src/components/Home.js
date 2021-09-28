@@ -11,7 +11,7 @@ class Home extends React.Component {
     };
   }
   componentDidMount = () => {
-    axios.get(process.env.REACT_APP_BASEURI).then((resp) => {
+    axios.get(`https://a401-fruit-api.herokuapp.com`).then((resp) => {
       this.setState({ data: resp.data });
       console.log(this.state.data);
     });
